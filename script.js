@@ -54,9 +54,9 @@
 //     console.log("5 is great")
 // }
 
-let name = "";
+// let name = "";
 
-name === "ade" ? console.log("Ade is the name") : console.log("uhmmm")
+// name === "ade" ? console.log("Ade is the name") : console.log("uhmmm")
 
 // switch("ade"){
 //     case "ade": 
@@ -73,3 +73,42 @@ name === "ade" ? console.log("Ade is the name") : console.log("uhmmm")
 
 // }
 
+function myApp() {
+    // return 
+    console.log("hello world")
+}
+
+// const run =
+ myApp();
+// console.log(run)
+
+
+
+
+function multiply(a, b, c){
+   return  a * b + c
+}
+
+// let ade = "sola"; ade = "bola"; console.log(ade)
+
+
+console.log(multiply(2, 3, 4));
+console.log(multiply(40, 50, 60))
+
+function cars(){
+    let carName = "volvo"
+console.log(carName)
+
+}
+
+
+cars();
+
+function shoeBrand(shoe) {
+    return shoe;
+}
+
+
+let shoe = shoeBrand("Adidas");
+
+console.log(`My shoe drip is ${shoe}`)
