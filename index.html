@@ -7,8 +7,54 @@
 </head>
 <body>
     <p id="demo"></p>
-    <script src="./script.js">
-        
+
+
+    <form action="" id="form" >
+        <input type="text" id="name">
+        <p id="nameError"></p>
+        <input type="text" id="email">
+        <p id="emailError"></p>
+        <input type="submit" value="submit">
+    </form>
+
+    <script >
+            // function validateForm(){
+            //     let NameVal = document.forms["form"]["name"].value
+            //     let EmailVal = document.forms["form"]["email"].value
+                
+            //     if (!NameVal){
+            //         // document.getElementById("nameError").innerHTML="pls Enter you Name"
+            //         alert("pls enter your name")
+            //         return false;
+            //     }
+
+            //     if(!EmailVal){
+            //         alert("pls enter your email");
+            //         return false;
+            //     }
+            // }
+
+
+          let formValue = document.getElementById("form");
+
+          formValue.addEventListener("submit", function(event)  {
+                const nameValue = document.getElementById("name").value
+                const emailValue = document.getElementById("email").value
+
+
+                document.getElementById("nameError").innerHTML = "";
+                 document.getElementById("emailError").innerHTML = "";
+
+                if(!nameValue){
+                         event.preventDefault();
+                    document.getElementById("nameError").innerHTML= "name is required"
+                }
+
+                if(!emailValue){
+                         event.preventDefault();
+                    document.getElementById("emailError").innerHTML = "email is required"
+                }
+          })
     </script>
 </body>
 </html>

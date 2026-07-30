@@ -112,3 +112,22 @@ function shoeBrand(shoe) {
 let shoe = shoeBrand("Adidas");
 
 console.log(`My shoe drip is ${shoe}`)
+
+const test = () => console.log("hello world")
+
+test();
+
+
+let name = `Sadde
+is my 
+best friend  `
+
+// ;
+const subject = new String("Maths")
+console.log(name.charAt(1))
+// let text = "We are the so-called \b \"Vikings\" from the north.";
+// console.log(text)
+
+let text = "HELLO WORLD";
+let char = text.charCodeAt(0);
+console.log(char)
