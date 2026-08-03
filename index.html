@@ -8,16 +8,33 @@
 <body>
     <p id="demo"></p>
 
-
+<!-- 
     <form action="" id="form" >
         <input type="text" id="name">
         <p id="nameError"></p>
         <input type="text" id="email">
         <p id="emailError"></p>
         <input type="submit" value="submit">
+    </form> -->
+
+    <form action="" id="lotto" onsubmit="GCL()">
+        <input type="number" id="score">
+        <input type="submit" value="check score">
     </form>
 
     <script >
+        function GCL(){
+            // let score = document.form["lotto"]["score"].value
+                         event.preventDefault();
+
+          console.log(  document.getElementById("score").value)
+        }
+
+            console.log(score)
+
+    
+
+
             // function validateForm(){
             //     let NameVal = document.forms["form"]["name"].value
             //     let EmailVal = document.forms["form"]["email"].value
@@ -35,26 +52,26 @@
             // }
 
 
-          let formValue = document.getElementById("form");
+        //   let formValue = document.getElementById("form");
 
-          formValue.addEventListener("submit", function(event)  {
-                const nameValue = document.getElementById("name").value
-                const emailValue = document.getElementById("email").value
+        //   formValue.addEventListener("submit", function(event)  {
+        //         const nameValue = document.getElementById("name").value
+        //         const emailValue = document.getElementById("email").value
 
 
-                document.getElementById("nameError").innerHTML = "";
-                 document.getElementById("emailError").innerHTML = "";
+        //         document.getElementById("nameError").innerHTML = "";
+        //          document.getElementById("emailError").innerHTML = "";
 
-                if(!nameValue){
-                         event.preventDefault();
-                    document.getElementById("nameError").innerHTML= "name is required"
-                }
+        //         if(!nameValue){
+        //                  event.preventDefault();
+        //             document.getElementById("nameError").innerHTML= "name is required"
+        //         }
 
-                if(!emailValue){
-                         event.preventDefault();
-                    document.getElementById("emailError").innerHTML = "email is required"
-                }
-          })
+        //         if(!emailValue){
+        //                  event.preventDefault();
+        //             document.getElementById("emailError").innerHTML = "email is required"
+        //         }
+        //   })
     </script>
 </body>
 </html>

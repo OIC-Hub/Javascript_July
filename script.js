@@ -131,3 +131,6 @@ console.log(name.charAt(1))
 let text = "HELLO WORLD";
 let char = text.charCodeAt(0);
 console.log(char)
+
+const rando = Math.floor(Math.random() * 10);
+console.log(rando)
