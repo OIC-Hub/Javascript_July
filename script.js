@@ -288,8 +288,51 @@ fruit[fruit.length] = "lemon,"
 // } while (count);
 
 
-const data = [{id: 1, name: "sola"}, {id:2, name: "Ade"}, {id:3, name: "Kunle"}]
+// const data = [{id: 1, name: "sola"}, {id:2, name: "Ade"}, {id:3, name: "Kunle"}]
 
-data.forEach(function(item){
-    console.log(`${item.id} - ${item.name} `)
-})
+// data.forEach(function(item){
+//     console.log(`${item.id} - ${item.name} `)
+// })
+
+
+// data.forEach((item) => {
+//         console.log(`${item.id} - ${item.name} `)
+// })
+
+// const fruits = ["mango", "apple", "banana"];
+
+// fruits.forEach((fruit, index) => {
+//         console.log(`${index + 1} - ${fruit} `)
+
+// })
+
+const person = {
+    name: "ade",
+    age: 45,
+    city: "Lagos"
+}
+
+for(let key in person){
+    console.log(`${key} - ${person[key]}`)
+    continue;
+}
+
+
+// const fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+// for (let fruit of fruits) {
+//   if (fruit === "Banana") {
+//     continue; // ← skip this one, go to the next
+//   }
+//   console.log(fruit);
+// }
+
+
+const prices = [500, 1200, 800, 3000];
+let total = 0;
+
+for (let price of prices) {
+  total = total + price;
+}
+
+console.log("Total: ₦" + total);

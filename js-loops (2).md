@@ -511,7 +511,7 @@ for (let score of scores) {
 2. Create an array of 5 food items. Use `for...of` to print each one.
 3. Create an array of numbers. Use a loop to add them all together and print the total.
 4. Loop through an array of names. If the name is "Grace", print "Found Grace!" and stop the loop.
-5. **Bonus:** Create an array of numbers 1 to 10. Loop through and print only the even numbers. Hint: a number is even if `number % 2 === 0`.
+5. Create an array of numbers 1 to 10. Loop through and print only the even numbers. Hint: a number is even if `number % 2 === 0`.
 
 
 
