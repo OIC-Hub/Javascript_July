@@ -328,11 +328,19 @@ for(let key in person){
 // }
 
 
-const prices = [500, 1200, 800, 3000];
-let total = 0;
+// const prices = [500, 1200, 800, 3000];
+// let total = 0;
 
-for (let price of prices) {
-  total = total + price;
-}
+// for (let price of prices) {
+//   total = total + price;
+// }
 
-console.log("Total: ₦" + total);
+// console.log("Total: ₦" + total);
+
+
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error =>{
+    console.log(error)
+  })
