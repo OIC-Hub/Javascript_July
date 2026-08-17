@@ -338,9 +338,42 @@ for(let key in person){
 // console.log("Total: ₦" + total);
 
 
-fetch("https://jsonplaceholder.typicode.com/users")
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error =>{
-    console.log(error)
-  })
+// fetch("https://jsonplaceholder.typicode.com/users")
+//   .then(response => response.json())
+//   .then(data => console.log(data))
+//   .catch(error =>{
+//     console.log(error)
+//   })
+
+
+ async function fetchData() { 
+  try { 
+    const response = await fetch("https://dummyjson.com/products"); 
+    const data = await response.json(); 
+    console.log(data); 
+
+     if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.json()}`);
+    }
+    localStorage.setItem("products", JSON.stringify(data.products))
+   
+
+
+  } catch (error) { 
+    console.error(error); 
+  } 
+} 
+
+
+function getMYdata(){
+    const container = document.getElementById("user-list"); 
+    let getMyData = localStorage.getItem("products");
+   const convertedData = JSON.parse(getMyData)
+ container.innerHTML = ""; 
+       convertedData.map((product) => { 
+      container.innerHTML += `<div>${product.title}  <img style="width:100px" src="${product.images[0]}"></div>`; 
+    }); 
+}
+
+fetchData();
+getMYdata();
